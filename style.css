@@ -1,0 +1,79 @@
+* {
+    text-align: center;
+  }
+  
+  body {
+    font-family: "Roboto Mono", monospace;
+    min-height: 400px;
+    background-image: url("https://st.depositphotos.com/1782880/1328/i/600/depositphotos_13289313-stock-photo-grass-texture.jpg");
+    background-color: #111;
+    background-size: 100%;
+    background-position: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  
+  .page-logo {
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  table {
+    border: 2px solid white;
+    border-collapse: collapse;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 40px;
+  }
+  
+  th,
+  tr,
+  td {
+    border: solid 1px white;
+    color: white;
+  }
+  .counter{
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: top;
+      align-items: center;
+  }
+  Button{
+    padding: 4px;
+    border-radius: 10px;
+    background: beige;
+    cursor: pointer;
+    align-self: center;
+  }
+  .eraseData{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+  }
+  
