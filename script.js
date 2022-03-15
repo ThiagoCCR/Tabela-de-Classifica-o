@@ -1,5 +1,4 @@
 let listOfTeams = [];
-let newListOfTeams = [];
 
 function calculatePoints(team){
     let points = team.vitorias*3 + team.empates
@@ -31,7 +30,6 @@ function addWin (i){
     team.vitorias++
     team.pontos = calculatePoints(team);
     displayTeams(listOfTeams);
-
 }
 
 
@@ -61,10 +59,10 @@ function addTeam(){
     listOfTeams.push(newTeam);
     newTeam.pontos = calculatePoints(newTeam);
     displayTeams(listOfTeams);
-    document.getElementById('addNewName').value = ''
-    document.getElementById('addNewWin').value = ''
-    document.getElementById('ddNewDraw').value = ''
-    document.getElementById('addNewLoss').value = ''
+    document.getElementById("addNewName").value = ''
+    document.getElementById("addNewWin").value = ''
+    document.getElementById("addNewDraw").value = ''
+    document.getElementById("addNewLoss").value = ''
 }
 
 function eraseData(){
@@ -72,11 +70,6 @@ function eraseData(){
     displayTeams (listOfTeams);
 }
 
-// function getNewListOfTeams(){
-//     let listaProvisoria = []; 
-//     let maiorPontuação = 0;
-//     for (let i = 0; i< listOfTeams.length; i++){
-//         if (Number(listOfTeams[i].pontos) >= listaprovisoria)
-//     }
-
+// function mySort(a,b){
+//     return a.pontos - b.pontos
 // }
