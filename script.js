@@ -7,12 +7,13 @@ function calculatePoints(team){
 
 function displayTeams (listOfTeams){
     let element = "";
-    for (let i=0; i<listOfTeams.length; i++){
-        element += `<tr><td>${listOfTeams[i].nome}</td>`
-        element += `<td>${listOfTeams[i].vitorias}</td>`
-        element += `<td>${listOfTeams[i].empates}</td>`
-        element += `<td>${listOfTeams[i].derrotas}</td>`
-        element += `<td>${listOfTeams[i].pontos}</td>`
+    const sortedList = listOfTeams.sort(mySort)
+    for (let i=0; i<sortedList.length; i++){
+        element += `<tr><td>${sortedList[i].nome}</td>`
+        element += `<td>${sortedList[i].vitorias}</td>`
+        element += `<td>${sortedList[i].empates}</td>`
+        element += `<td>${sortedList[i].derrotas}</td>`
+        element += `<td>${sortedList[i].pontos}</td>`
         element += `<td><button onClick="addWin(${i})">Vitória</button></td>`
         element += `<td><button onClick="addDraw(${i})">Empate</button></td>`
         element += `<td><button onClick="addLoss(${i})">Derrota</button></td>`
@@ -21,7 +22,6 @@ function displayTeams (listOfTeams){
     let displayText = document.getElementById("tabelaJogadores");
     tabelaJogadores.innerHTML = element;
 }
-
 displayTeams(listOfTeams);
 
 
@@ -70,6 +70,6 @@ function eraseData(){
     displayTeams (listOfTeams);
 }
 
-// function mySort(a,b){
-//     return a.pontos - b.pontos
-// }
+function mySort(a,b){
+    return b.pontos - a.pontos;
+}
